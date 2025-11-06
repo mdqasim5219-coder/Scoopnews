@@ -775,24 +775,26 @@ img {
     border-bottom: none;
   }
 }
-/* ===== MENU BUTTON ===== */
+/* ==== MENU BUTTON ==== */
 .menu-btn {
   display: none;
-  background: #c41230;
+  background: linear-gradient(135deg, #ff0040, #c41230);
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   border: none;
   padding: 8px 14px;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(196, 18, 48, 0.3);
 }
 
 .menu-btn:hover {
-  background: #a60f28;
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #c41230, #ff3366);
 }
 
-/* ===== MENU STYLING ===== */
+/* ==== NAV LINKS (DESKTOP) ==== */
 nav ul {
   list-style: none;
   display: flex;
@@ -804,16 +806,33 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  color: #222;
+  font-weight: 600;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* underline hover effect */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #ff0040, #ff8000);
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
 }
 
 nav ul li a:hover {
-  color: #c41230;
+  color: #ff0040;
 }
 
-/* ===== MOBILE STYLES ===== */
+/* ==== MOBILE MENU ==== */
 @media (max-width: 768px) {
   .menu-btn {
     display: block;
@@ -825,13 +844,12 @@ nav ul li a:hover {
     position: absolute;
     right: 10px;
     top: 70px;
-    width: 220px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 230px;
+    background: linear-gradient(135deg, #fff, #ffecec);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    padding: 10px 0;
-    animation: fadeIn 0.3s ease forwards;
+    animation: fadeIn 0.4s ease forwards;
   }
 
   nav.active ul {
@@ -840,41 +858,45 @@ nav ul li a:hover {
 
   nav ul li {
     width: 100%;
+    text-align: center;
   }
 
   nav ul li a {
     display: block;
-    padding: 12px 0;
-    font-size: 16px;
+    padding: 14px 0;
+    font-size: 17px;
     color: #333;
-    transition: background 0.2s ease;
+    border-bottom: 1px solid rgba(255, 64, 64, 0.1);
+    transition: all 0.2s ease;
   }
 
   nav ul li a:hover {
-    background: #f8f8f8;
-    color: #c41230;
+    background: linear-gradient(135deg, #ff0040, #ff8000);
+    color: #fff;
+    transform: scale(1.02);
   }
 
+  /* Dropdown */
   .dropdown-content {
     position: static;
-    background: #fafafa;
+    background: rgba(255, 255, 255, 0.9);
     box-shadow: none;
+    border: none;
     padding: 0;
-    border-top: 1px solid #eee;
   }
 
   .dropdown-content li a {
-    font-size: 15px;
-    color: #555;
+    font-size: 16px;
+    background: #fff;
   }
 
   .dropdown-content li a:hover {
-    background: #f0f0f0;
-    color: #c41230;
+    background: linear-gradient(135deg, #ff8000, #ff0040);
+    color: #fff;
   }
 }
 
-/* ===== ANIMATION ===== */
+/* ==== ANIMATION ==== */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -885,9 +907,3 @@ nav ul li a:hover {
     transform: translateY(0);
   }
 }
-
-
-
-
-
-
