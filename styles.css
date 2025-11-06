@@ -726,80 +726,31 @@ img {
     font-size: 24px;
   }
 }
-/* ===== MOBILE MENU FIX ===== */
+/* ====== MENU BUTTON ====== */
 .menu-btn {
   display: none;
   background: #c41230;
   color: #fff;
-  font-size: 1.5rem;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .menu-btn {
-    display: block;
-  }
-
-  nav ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    right: 10px;
-    top: 60px;
-    background: #fff;
-    width: 200px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 10px 0;
-  }
-
-  nav.active ul {
-    display: flex;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  .dropdown-content {
-    position: static;
-    box-shadow: none;
-    border: none;
-  }
-
-  .dropdown-content li {
-    border-bottom: none;
-  }
-}
-/* ==== MENU BUTTON ==== */
-.menu-btn {
-  display: none;
-  background: linear-gradient(135deg, #ff0040, #c41230);
-  color: #fff;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   border: none;
   padding: 8px 14px;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(196, 18, 48, 0.3);
+  box-shadow: 0 4px 10px rgba(196, 18, 48, 0.4);
 }
 
 .menu-btn:hover {
+  background: #a50f25;
   transform: scale(1.05);
-  background: linear-gradient(135deg, #c41230, #ff3366);
 }
 
-/* ==== NAV LINKS (DESKTOP) ==== */
+/* ====== DESKTOP MENU ====== */
 nav ul {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
   margin: 0;
   padding: 0;
 }
@@ -808,31 +759,60 @@ nav ul li a {
   text-decoration: none;
   color: #222;
   font-weight: 600;
+  font-size: 17px;
   position: relative;
   transition: all 0.3s ease;
 }
 
-/* underline hover effect */
 nav ul li a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -4px;
+  bottom: -5px;
   width: 0%;
   height: 3px;
-  background: linear-gradient(90deg, #ff0040, #ff8000);
+  background: #c41230;
   transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #c41230;
 }
 
 nav ul li a:hover::after {
   width: 100%;
 }
 
-nav ul li a:hover {
-  color: #ff0040;
+/* ====== DROPDOWN ====== */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-top: 10px;
+  z-index: 999;
+  overflow: hidden;
 }
 
-/* ==== MOBILE MENU ==== */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.dropdown-content li a:hover {
+  background: #c41230;
+  color: #fff;
+}
+
+/* ====== MOBILE MENU ====== */
 @media (max-width: 768px) {
   .menu-btn {
     display: block;
@@ -845,7 +825,7 @@ nav ul li a:hover {
     right: 10px;
     top: 70px;
     width: 230px;
-    background: linear-gradient(135deg, #fff, #ffecec);
+    background: #fff;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -865,38 +845,50 @@ nav ul li a:hover {
     display: block;
     padding: 14px 0;
     font-size: 17px;
-    color: #333;
-    border-bottom: 1px solid rgba(255, 64, 64, 0.1);
-    transition: all 0.2s ease;
+    color: #222;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
   }
 
   nav ul li a:hover {
-    background: linear-gradient(135deg, #ff0040, #ff8000);
+    background: #c41230;
     color: #fff;
-    transform: scale(1.02);
+    transform: scale(1.03);
   }
 
-  /* Dropdown */
   .dropdown-content {
     position: static;
-    background: rgba(255, 255, 255, 0.9);
+    background: #f8f8f8;
     box-shadow: none;
     border: none;
-    padding: 0;
   }
 
   .dropdown-content li a {
-    font-size: 16px;
-    background: #fff;
+    background: transparent;
+    color: #444;
   }
 
   .dropdown-content li a:hover {
-    background: linear-gradient(135deg, #ff8000, #ff0040);
+    background: #c41230;
     color: #fff;
   }
 }
 
-/* ==== ANIMATION ==== */
+/* ====== HEADER BACKGROUND ====== */
+.site-header {
+  background: linear-gradient(90deg, #c41230, #b21029);
+  color: #fff;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+  padding: 10px 0;
+}
+
+.site-header .brand-text {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* ====== ANIMATION ====== */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -907,3 +899,4 @@ nav ul li a:hover {
     transform: translateY(0);
   }
 }
+
