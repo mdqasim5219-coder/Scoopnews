@@ -123,5 +123,17 @@ We believe in collaboration, not competition. By joining our community of food a
       </nav>
     </div>
   </footer>
+        <script src="script.js"></script>
+   <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const menuBtn = document.getElementById('menuBtn');
+  const navMenu = document.getElementById('navMenu');
+
+  menuBtn.addEventListener('click', function() {
+    navMenu.classList.toggle('active');
+  });
+});
+</script>
 </body>
 </html>
+
