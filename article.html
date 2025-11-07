@@ -1,28 +1,70 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Scoopnews</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scoop Time — Home</title>
+  <meta name="description" content="Scoop News — Pakistan style news portal (English + Urdu)" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <!-- Urdu Nastaleeq (fallback if available) -->
+  <link href="https://fonts.googleapis.com/earlyaccess/notonastaliqurdu.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- TOP HEADLINE TICKER -->
+  <div class="top-ticker" id="ticker">
+    <div class="ticker-inner" id="tickerInner">
+      <span class="tick-item">Breaking: New policy announced by the government.</span>
+      <span class="tick-item">Tech: Major AI update reshapes developer tools.</span>
+      <span class="tick-item">Sports: National team clinches victory in final.</span>
+      <span class="tick-item">Business: Markets rally after positive jobs report.</span>
+      <span class="tick-item">Breaking: New public health advisory released.</span>
+    </div>
+    <div class="lang-switch">
+      <button id="langEn" class="lang-btn active" data-lang="en">English</button>
+      <button id="langUr" class="lang-btn" data-lang="ur">اردو</button>
+    </div>
+  </div>
+
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <h1 class="logo">Scoop <span>News</span></h1>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="privacy.html">Privacy</a>
-      </nav>
-    </div>
-  </header>
+      <!-- Logo: Globe + Newspaper icons combined in SVG -->
+      <a href="index.html" class="brand">
+        
+        <span class="brand-text">
+  <span class="brand-en">🌐 <strong>Scoop</strong> Time</span>
+  <span class="brand-ur" lang="ur" dir="rtl"></span>
+</span>
+
+      </a>
+
+<header>
+  <span>
+  <div class="header-container">
+    <button id="menuBtn">☰</button>
+  </div>
+</span>
+  <nav id="navMenu">
+      <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="sports.html">Sports</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="business.html">Business</a></li>
+    <li><a href="pets.html">Pets</a></li>
+    <li><a href="health.html">Health</a></li>
+    <li><a href="tech.html">Tech</a></li>
+      <div class="dropdown">
+        <a href="#">More ▼</a>
+        <div class="dropdown-content">
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contect</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
   <main class="container article-page">
     <article class="article-full">
@@ -39,7 +81,7 @@ Writing for us means more than just publishing your words — it’s about creat
 Our editorial team values content that educates, informs, and motivates readers. Your health content contribution could include topics like exercise routines, mental health, healthy recipes, or even personal weight loss journeys that inspire others.</P>
 <h3>Why Health & Food Guest Posts Are in High Demand</h3>
 <p>Health and food are two of the most searched topics in the digital world. Every day, people look for nutrition tips, healthy recipes, and cooking tips to improve their lives. Websites need authentic voices to meet that demand.
-A health and wellness guest post helps readers find trustworthy information while also giving you exposure as a writer. Platforms offering food and nutrition guest post opportunities are growing fast because readers crave real, relatable advice.</p>
+A health and wellness guest post https://www.youtube.com/@mdqasim30 helps readers find trustworthy information while also giving you exposure as a writer. Platforms offering food and nutrition guest post opportunities are growing fast because readers crave real, relatable advice.</p>
 <h3>How Contributing Helps Grow Your Online Authority</h3>
 <p>Publishing a fitness guest post submission or nutrition guest post opportunities article can help you build your brand. Each post you write strengthens your online presence and positions you as a reliable expert.
 Your article will also include a brief author bio, giving you a direct link to your site or portfolio. Over time, these high-quality backlinks and mentions will boost your visibility, helping you grow your audience organically.</p>
@@ -73,11 +115,13 @@ We believe in collaboration, not competition. By joining our community of food a
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Scoop News. All rights reserved.</p>
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> <span data-lang-en>Scoop News</span><span data-lang-ur style="display:none">اسکوپ نیوز</span>. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="privacy.html" data-lang-en>Privacy</a>
+        <a href="contact.html" data-lang-en>Contact</a>
+      </nav>
     </div>
   </footer>
 </body>
 </html>
-
-
