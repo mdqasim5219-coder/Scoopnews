@@ -294,10 +294,29 @@ document.getElementById('searchForm').addEventListener('submit', function(e) {
 }
 
 </style>
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+  const dropdowns = document.querySelectorAll('.dropdown');
+
+  // Toggle main menu
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
+  // Toggle dropdowns on mobile
+  dropdowns.forEach(drop => {
+    drop.addEventListener('click', (e) => {
+      e.stopPropagation();
+      drop.classList.toggle('open');
+    });
+  });
+</script>
 
 </body>
   <script src="script.js"></script>
 </html>
+
 
 
 
