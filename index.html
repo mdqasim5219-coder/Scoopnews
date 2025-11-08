@@ -42,30 +42,23 @@
         </span>
       </a>
 
-<header>
-  <div class="header-container">
-    <h1 class="logo">📰 Scoop News</h1>
-    <button id="menuBtn">☰</button>
-  </div>
-
-  <nav id="navMenu">
-      <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="sports.html">Sports</a></li>
-    <li><a href="entertainment.html">Education</a></li>
-    <li><a href="business.html">Business</a></li>
-    <li><a href="health.html">Health</a></li>
-    <li><a href="tech.html">Tech</a></li>
-      <div class="dropdown">
-        <a href="#">More ▼</a>
-        <div class="dropdown-content">
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contect</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
-      </ul>
-    </nav>
-  </div>
+<header class="main-header">
+  <div class="logo">Scoop News</div>
+  
+  <button id="menuToggle" class="menu-btn">☰</button>
+  
+  <nav id="navMenu" class="nav-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sports.html">Sports</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="business.html">Business</a></li>
+      <li><a href="health.html">Health</a></li>
+      <li><a href="tech.html">Tech</a></li>
+    </ul>
+  </nav>
 </header>
+
 <!-- ✅ Search Box -->
   <form id="searchForm">
   <input type="text" id="searchInput" placeholder="Search news..." />
@@ -316,6 +309,7 @@ document.getElementById('searchForm').addEventListener('submit', function(e) {
 </body>
   <script src="script.js"></script>
 </html>
+
 
 
 
